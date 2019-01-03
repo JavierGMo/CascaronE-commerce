@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><!--Etiqueta para hacer reconocer al responsive design-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/PICOL-font-master/css/picol.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:400,500,700" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <!--<img src="" alt="logo" class="logo">-->
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Tickets</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <div class="opciones-sesion">
+                <a href="#">Inicia sesion</a>
+                <a href="">Registrate</a>
+                <a href="#" class="icono-carrito"><i class="picol_shopping_cart"></i></a>
+            </div>
+        </nav>
+    </header><!-- Fin del header-->
+    <main><!--Inicio del main-->
+        <div class="contenedor-descripcion clearfix">
+            <p>Descripcion: </p>
+            <form action="#" method="POST">
+                <div class="precio">
+                    <legend class="rango-precio">Rango del precio: </legend>
+                    <input type="range" min="0" max="100000">
+                </div>
+                <div class="ubicacion">
+                    <legend>Ubicacion: </legend>
+                    <div class="cont-cdmx">
+                        <label class="nombres-mex" for="cdmx">CDMX</label><input type="checkbox" name="cdmx" id="cdmx">
+                    </div>
+                    <div class="cont-guad">
+                        <label class="nombres-mex" for="guadalajara">Guadalajara</label><input type="checkbox" name="guadalajara" id="guadalajara">
+                    </div>
+                    <div class="cont-edomex">
+                        <label class="nombres-mex" for="edomex">Edo. Mex.</label><input type="checkbox" name="edomex" id="edomex">
+                    </div>
+                </div>
+                <input type="button" value="Enviar" name="enviar" id="enviar">
+            </form>
+        </div><!--fin del aside-->
+        <div class="contenedor-productos clearfix">
+            <div class="producto clearfix">
+                <img src="img/imagen.png" alt="proudcto1">
+                <span class="parrafito-chido">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>$100</p>
+                </span>
+            </div>
+            <div class="producto clearfix">
+                <img src="img/imagen.png" alt="producto2">
+                <span class="parrafito-chido">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>$100</p>
+                </span>
+            </div>
+            <div class="producto clearfix">
+                <img src="img/imagen.png" alt="producto3">
+                <span class="parrafito-chido">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>$100</p>
+                </span>
+            </div>
+        </div><!--Fin de seccion de productos-->
+    </main>
+    <hr>
+    <footer class="clearfix">
+        <div class="contenedor-footer">
+            <div class="contenedor-terminos">
+                <ul>
+                    <li><a href="#">Terminos y condiciones</a></li>
+                    <li><a href="#">Politicas de privacidad</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </div> 
+            <div class="lema-copy">
+                <p>JGM.inc&copy;</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
