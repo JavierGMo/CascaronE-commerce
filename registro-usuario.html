@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="css/PICOL-font-master/css/picol.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:400,500,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="contenedor-sesion"><!--.contenedor-alta-->
+        <div class="contenedor-usuario"><!--.contenedor-registro-->
+            <div class="imagen-pagina">
+                <a href="index.html" class="img-datos"><img src="img/imagensesion.png" alt="logo de la pagina" class="img-sesion"></a>
+            </div>
+            <form action="" class="formul-sesion">
+                <legend>Registrate:</legend>
+                <div class="caja c-datos">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" placeholder="Apellidos" required>
+                    <label for="nombre">Fecha de nacimiento:</label>
+                    <input type="date" id="fechaNacimiento">
+                    <label for="correoRegistro">Correo:</label>
+                    <input type="email" id="correoRegistro" placeholder="Correo" required>
+                    <label for="usuarioNuevo">Nombre de usuario:</label>
+                    <input type="text" id="usuarioNuevo" placeholder="Nombre de usuario" required>
+                    <label for="nuevoPassword">Contraseña nueva:</label>
+                    <input type="password" id="nuevoPassword" placeholder="Contraseña" required>
+                    <label for="passwordConfirmado">Confirmar Contraseña:</label>
+                    <input type="password" id="passwordConfirmado" placeholder="Confirmar contraseña" required>
+                </div>
+                <div class="boton-sesion"><!--.boton-registro-->
+                    <input type="submit" value="Registrar" id="nuevoRegistro">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
