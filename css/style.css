@@ -1,242 +1,298 @@
-*{
+* {
     box-sizing: border-box;
 }
-*, *::before, *::after{
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
-    border: 1px red green;
+    background-color: #f7f1e3;
+    /*border: 1px red green;*/
 }
-nav{
+
+
+/*estilo global**/
+
+a {
+    font-family: Roboto;
+    text-decoration: none;
+    color: #ecf0f1;
+}
+
+p {
+    font-family: Roboto;
+}
+
+form {
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+
+/*estilo de la barra**/
+
+nav {
     position: relative;
-    background-color: #212121;
+    background-color: #3498db;
     padding: 1% 0 1% 0;
 }
-.logo{
+
+.logo {
     height: 0;
     width: 0;
 }
-nav ul li{
+
+nav ul li {
     display: inline;
     list-style: none;
 }
-nav ul li a{
+
+nav ul li a {
     padding-right: 20px;
     padding-left: 20px;
     font-weight: 500;
+    transition: .3s;
 }
-nav ul li :nth-child(5){
+
+nav ul li :nth-child(5) {
     padding-right: 0px;
 }
-nav ul li a:hover{
-    border: 1px solid white;
-    padding: 9px;/*Quedo chido aqui XD*/
-    border-radius: 30px;
+
+nav ul li a:hover {
+    border-bottom: 3px solid #ecf0f1;
+    padding: 9px;
+    /*Quedo chido aqui XD*/
+    /*border-radius: 30px;*/
 }
-a{
-    font-family: Roboto;
-    text-decoration: none;
-    color: white;
-}
-p{
-    font-family: Roboto;
-}
-.opciones-sesion{
+
+
+/*enlaces para inicio de sesion y registro de usuario**/
+
+.opciones-sesion {
     position: absolute;
-    right: 37px;
+    right: 39px;
     top: 30px;
     left: auto;
     margin-right: 50px;
     padding-right: 20px;
 }
-.opciones-sesion a{
+
+.opciones-sesion a {
     margin-right: 25px;
     font-family: Roboto;
     font-weight: 500;
+    transition: .3s;
 }
-.opciones-sesion a:hover{
-    border: 1px solid white;
+
+.opciones-sesion a:hover {
+    border-bottom: 3px solid #ecf0f1;
     padding: 10px;
-    border-radius: 30px;
+    /*border-radius: 30px;*/
 }
-.opciones-sesion .icono-carrito:hover{
-    border: 1px solid white;
-    padding: 2px;
-    border-radius: 100%;
+
+.opciones-sesion .icono-carrito:hover {
+    border-bottom: 3px solid #ecf0f1;
+    padding: 1px;
+    /*border-radius: 100%;*/
 }
+
+
 /*Parte principal*/
-main{
+
+main {
     margin-top: 10px;
 }
+
+
 /*Inicio descripcion*/
-form{
-    padding-bottom: 20px;
-    padding-left: 10px;
-}
-.contenedor-descripcion p{
+
+.contenedor-descripcion p {
     font-family: Montserrat;
     font-weight: 700;
 }
-.contenedor-descripcion{
+
+.contenedor-descripcion {
     /*margin: 0;*/
     margin-left: 30px;
     float: left;
     width: 30%;
     height: 50%
 }
-.rango-precio{
+
+.rango-precio {
     margin-bottom: 15px;
 }
-legend, label{
+
+legend,
+label {
     font-family: Roboto;
     font-weight: 400;
 }
-.ubicacion legend{
+
+.ubicacion legend {
     margin: 10px auto;
 }
-.ubicacion div{
+
+.ubicacion div {
     margin-top: 15px;
 }
 
-#enviar{
+#enviar {
     margin-top: 23px;
     padding: 10px 15px;
-    background-color: #2c3e50;
-    color: white;
+    background-color: rgba(52, 219, 119, .5);
+    color: black;
     /*box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.3);*/
     border-radius: 10%;
     border: 0px;
     cursor: pointer;
-    
+    transition: .3s;
 }
-#enviar:hover{
+
+#enviar:hover {
     padding: 11px 16px;
     font-size: 15px;
     box-shadow: 2px 2px 0px 1px rgba(0, 0, 0, 0.3);
 }
+
+
 /*#enviar:focus{
     outline: none;
 }*/
+
+
 /*Seccion de productos*/
-.contenedor-descripcion, .contenedor-productos{
+
+.contenedor-descripcion,
+.contenedor-productos {
     float: left;
     margin-bottom: 20px;
 }
-.clearfix{
+
+.clearfix {
     overflow: hidden;
 }
+
+
 /*Fin descripcion*/
-.contenedor-productos{
-    background-color: #F5F5F5;
+
+
+/*Estilos para mostrar los productos**/
+
+.contenedor-productos {
+    background-color: #ecf0f1;
     box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.3);
     padding: 10px;
     width: 50%;
     height: 90%;
     border-radius: 0 0 2% 2%;
 }
-.producto{
+
+.producto {
     font-size: 15px;
     margin-top: 30px;
     margin-left: 10px;
 }
-.producto img{
+
+.producto img {
     height: 100px;
     width: 100px;
     float: left;
     margin-right: 15px;
 }
-.parrafito-chido{
+
+.parrafito-chido {
     padding: 10px;
 }
-/*Footer*/
-hr{
-    clear: both;
-    
-    width: 80%;
-}
-footer{
-    clear: both;
-    margin: 0 auto;
-}
-.contenedor-footer{
-    position: relative;
-}
-.contenedor-terminos{
-    margin-left: 30%;
-    margin-bottom: 50px;
-}
-.contenedor-terminos ul li{
-    display: inline;
-    list-style: none;
-    padding-right: 5px;
-}
-.contenedor-terminos ul li::nth-last-child(3){
-    padding-right: 0px;
-}
-.contenedor-terminos ul li a{
-    color: black;
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 15px;
-}
-.contenedor-terminos ul li a:hover{
-    font-family: Roboto;
-    /*text-decoration: underline;*/
-    pointer-events: all;
-    text-decoration: underline;
-}
-.lema-copy{
-    position: absolute;
-    right: 50%;
-    top: 0;
-    bottom: 0;
-    margin-top: 20px;
-}
 
-/**Inicio de sesion*/
 
-.contenedor-sesion{/*contenedor-formulario*/
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 28px;
-}
-.contenedor-usuario{/*.contenedor-datos*/
+/*fin para mostrar los productos**/
+
+
+/*estilos globales para inicio de sesion y registro de usuario**/
+
+.contenedor-usuario {
+    /*.contenedor-datos*/
     margin-top: 3rem;
     padding: 20px auto;
 }
-.contenedor-usuario form{
-    max-width: 300px;
+
+.contenedor-usuario form {
+    max-width: 30%;
+    /*300px*/
     text-align: center;
 }
-.contenedor-usuario{
+
+.contenedor-usuario {
     background-color: #F5F5F5;
     box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.3);
     border-radius: 0 0 2% 2%;
     margin-top: 20px;
 }
-.img-sesion{
+
+.img-sesion {
     width: 6rem;
     height: 6rem;
     border-radius: 100%;
     margin: 10px auto;
 }
-form.formul-sesion{
+
+
+/*fin de estilos globales**/
+
+
+/**inicio de sesion*/
+
+.contenedor-sesion {
+    /*contenedor-formulario*/
+    max-width: 70%;
+    /*600px*/
     margin: 0 auto;
+    text-align: center;
+    padding-bottom: 28px;
 }
-.formul-sesion legend{
+
+
+/*contenedor registro**/
+
+.cont-registro {
+    max-width: 80%;
+    /*600px*/
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 28px;
+}
+
+form.formul-sesion {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.formul-sesion legend {
     font-weight: 500;
 }
-.formul-sesion .caja{
+
+.formul-sesion .caja {
     margin: 20px 10px;
 }
-.caja label, .caja input, .boton-sesion{
+
+.c-datos {
+    width: 100%;
+}
+
+.caja label,
+.caja input,
+.boton-sesion {
     display: block;
     text-align: start;
 }
-.caja input{
+
+.caja input {
     margin: 10px 0;
     width: 80%;
     padding: 10px 0;
@@ -246,13 +302,17 @@ form.formul-sesion{
     transition: .3s;
     outline: none;
 }
-.caja input:focus{
+
+.caja input:focus {
     border: 1px solid #2980b9;
 }
-.boton-sesion input{
+
+.boton-sesion input {
     width: 80%;
 }
-#iniciosesion, #nuevoRegistro{
+
+#iniciosesion,
+#nuevoRegistro {
     color: white;
     margin-top: 20px;
     background-color: #344955;
@@ -264,7 +324,22 @@ form.formul-sesion{
     font-weight: 700;
 }
 
+div.usu-carp {
+    display: inline;
+    max-width: 500px;
+}
+
+.usuario-r,
+.carpi-r {}
+
+.imagen-pagina {
+    padding: 20px 30px;
+}
+
+
 /**Estilos para el registro*/
+
+
 /*.contenedor-alta{
     max-width: 600px;
     margin: 0 auto;
@@ -282,14 +357,15 @@ form.formul-sesion{
     text-align: center;
     margin: 0 auto;
 }*/
-.imagen-pagina{
-    padding: 20px 30px;
-}
+
+
 /*.img-datos img{
     width: 6rem;
     height: 6rem;
     border-radius: 100%;
 }*/
+
+
 /*.datos label, .datos input, .boton-registro{
     display: block;
     text-align: start;
@@ -301,3 +377,57 @@ form.formul-sesion{
 .boton-registro input{
     width: 85%;
 }*/
+
+
+/*Footer*/
+
+hr {
+    clear: both;
+    width: 80%;
+}
+
+footer {
+    clear: both;
+    margin: 0 auto;
+}
+
+.contenedor-footer {
+    position: relative;
+}
+
+.contenedor-terminos {
+    margin-left: 30%;
+    margin-bottom: 50px;
+}
+
+.contenedor-terminos ul li {
+    display: inline;
+    list-style: none;
+    padding-right: 5px;
+}
+
+.contenedor-terminos ul li::nth-last-child(3) {
+    padding-right: 0px;
+}
+
+.contenedor-terminos ul li a {
+    color: black;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.contenedor-terminos ul li a:hover {
+    font-family: Roboto;
+    /*text-decoration: underline;*/
+    pointer-events: all;
+    text-decoration: underline;
+}
+
+.lema-copy {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+    margin-top: 20px;
+}

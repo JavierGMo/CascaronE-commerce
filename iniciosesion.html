@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,37 @@
     <title>Iniciar sesion</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/PICOL-font-master/css/picol.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:400,500,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:400,500,700" rel="stylesheet">
 </head>
+
 <body>
-    <div class="contenedor-sesion"><!--.contenedor-formulario-->
-        <div class="contenedor-usuario"><!--.contenedor-datos-->
+    <header>
+        <!--<img src="" alt="logo" class="logo">-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Visualizar</a></li>
+                <li><a href="#">Modelar</a></li>
+                <li><a href="#">Ticket</a></li>
+                <li><a href="#">Presupuesto</a></li>
+            </ul>
+            <div class="opciones-sesion">
+                <a href="iniciosesion.html">Inicia sesion</a>
+                <a href="registro-usuario.html">Registrate</a>
+                <a href="#" class="icono-carrito"><i class="picol_shopping_cart"></i></a>
+                <p> </p>
+            </div>
+        </nav>
+    </header>
+    <div class="contenedor-sesion">
+        <!--.contenedor-formulario-->
+        <div class="contenedor-usuario">
+            <!--.contenedor-datos-->
             <div class="imagen-pagina">
                 <a href="index.html"><img src="img/imagensesion.png" alt="Imagen de la sesion" class="img-sesion"></a>
             </div>
-            <form action="" class="formul-sesion"><!--.formul-sesion-->
+            <form action="" class="formul-sesion">
+                <!--.formul-sesion-->
                 <legend>Iniciar sesion:</legend>
                 <div class="caja">
                     <label for="correo-sesion">Correo:</label>
@@ -30,4 +53,5 @@
         </div>
     </div>
 </body>
+
 </html>
