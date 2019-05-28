@@ -15,7 +15,7 @@
 <body>
     <header>
         <!--<img src="" alt="logo" class="logo">-->
-        <nav>
+        <!--<nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="visualizar.html">Visualizar</a></li>
@@ -29,36 +29,192 @@
                 <a href="#" class="icono-carrito"><i class="picol_shopping_cart"></i></a>
                 <p> </p>
             </div>
+        </nav>-->
+        <nav>
+            <div class="cont-logo">
+                <a href="index.html">
+                    <img src="img/Carpifacil.png" alt="logo" class="logo">
+                </a>
+            </div>
+            <div class="opciones-sesion">
+                <a href="iniciosesion.html">Inicia sesion</a>
+                <a href="registro-usuario.html">Registrate</a>
+                <a href="#" class="icono-carrito"><i class="picol_search"></i></a>
+                <p> </p>
+            </div>
         </nav>
     </header>
     <!-- Fin del header-->
     <main>
         <!--Inicio del main-->
-        <div class="contenedor-descripcion clearfix">
-            <p>Herramientas: </p>
-
-        </div>
-        <!--fin del aside-->
-        <div class="modelo">
-
+        <div class="contenedor-modelo clearfix" id="modelochido">
+            <p>Modelos: </p>
+            <div class="opciones-modelo">
+                <div class="sillas" id="sillas">
+                    <a href="#desplegarsilla" id="slc-silla">Sillas</a>
+                    <div class="opc-modelos" id="desplegarsilla">
+                        <p id="respaldo-silla" title="silla/silla1.dae">Respaldo</p>
+                        <p id="base-silla" title="silla/silla2.dae">Base</p>
+                        <p id="patas-silla">Patas</p>
+                    </div>
+                </div>
+                <div class="cama" id="cama">
+                    <a href="#desplegarcama" id="slc-cama">Mesa</a>
+                    <div class="opc-modelos" id="desplegarcama">
+                        <p id="respaldo-cama" title="mesa/Mesa1.dae">Respaldo</p>
+                        <p id="base-cama" title="mesa/Mesa2.dae">Base</p>
+                        <p id="patas-cama" title="mesa/Mesa3.dae">Patas</p>
+                    </div>
+                </div>
+                <div class="ropero" id="ropero">
+                    <a href="#desplegarropero" id="slc-ropero">Ropero</a>
+                    <div class="opc-modelos" id="desplegarropero">
+                        <p id="respaldo-ropero" title="ropero/ropero.dae">Respaldo</p>
+                        <p id="base-ropero">Base</p>
+                        <p id="patas-ropero" title="ropero/patasrop.dae">Patas</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--Fin de seccion de productos-->
     </main>
-    <hr>
-    <footer class="clearfix">
-        <div class="contenedor-footer">
-            <div class="contenedor-terminos">
-                <ul>
-                    <li><a href="#">Terminos y condiciones</a></li>
-                    <li><a href="#">Politicas de privacidad</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                </ul>
-            </div>
-            <div class="lema-copy">
-                <p>JGM.inc&copy;</p>
-            </div>
-        </div>
-    </footer>
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/ColladaLoader.js"></script>
+    <script src="js/WebGL.js"></script>
+    <script src="js/menumodelo.js"></script>
+    <script>
+        if (WEBGL.isWebGLAvailable() === false) {
+            document.body.appendChild(WEBGL.getWebGLErrorMessage());
+        }
+        /*Variables para desplegar menus**/
+
+        let agregarmodelochido = document.getElementById('modelochido');
+
+        let piezas = [{
+            respaldo: '',
+            base: '',
+            patas: ''
+        }];
+
+        //poner un name en los tags de htmkl con los nombres de los modelos
+        //para poder traerlos mas facil y ahorrar procesamiento
+        let respaldosilla = document.getElementById('respaldo-silla');
+        let basesilla = document.getElementById('base-silla');
+        let patassilla = document.getElementById('patas-silla');
+
+        let respaldocama = document.getElementById('respaldo-cama');
+        let basecama = document.getElementById('base-cama');
+        let patascama = document.getElementById('patas-cama');
+
+        let respaldoropero = document.getElementById('respaldo-ropero');
+        let baseropero = document.getElementById('base-ropero');
+        let patasropero = document.getElementById('patas-ropero');
+
+        /*Variables de three**/
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var spotLight, lightHelper, shadowCameraHelper;
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.gammaInput = true;
+        renderer.gammaOutput = true;
+
+        var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        controls.enableZoom = false;
+
+        camera.position.z = 5;
+        camera.position.set(10, 5, 1);
+
+        var ambient = new THREE.AmbientLight(0xffffff, 0.1);
+        scene.add(ambient);
+        spotLight = new THREE.SpotLight(0x2980b9, 1);
+        //set(15, 80, 45)
+        spotLight.position.set(100, 80, 50);
+        spotLight.angle = Math.PI / 4;
+        spotLight.penumbra = 0.05;
+        spotLight.decay = 2;
+        spotLight.distance = 900;
+        spotLight.castShadow = true;
+        spotLight.shadow.mapSize.width = 1024;
+        spotLight.shadow.mapSize.height = 1024;
+        spotLight.shadow.camera.near = 10;
+        spotLight.shadow.camera.far = 200;
+        scene.add(spotLight);
+
+        var basem, respaldom, patasm;
+        var loader = new THREE.ColladaLoader();
+
+
+
+        respaldoropero.addEventListener('click', modeloaesena);
+        respaldocama.addEventListener('click', modeloaesena);
+        basecama.addEventListener('click', modeloaesena);
+        patascama.addEventListener('click', modeloaesena);
+        respaldosilla.addEventListener('click', modeloaesena);
+        basesilla.addEventListener('click', modeloaesena);
+        patasropero.addEventListener('click', modpatas);
+
+        function modeloaesena() {
+            console.log("click para agregar respaldo");
+            scene.dispose();
+            //scene.remove();
+            //this.getAttribute("title")
+            //console.log(`nombre del objeto: ${basem.id}`);
+            /*por si la cago*/
+            loader.load(`models/${this.getAttribute("title")}`, loadrespaldo);
+            //loader.load(`models/${piezas.respaldo}`, loadrespaldo);
+
+        }
+
+        function modpatas() {
+            console.log("click para agregar respaldo");
+            scene.dispose();
+            //scene.remove();
+            //this.getAttribute("title")
+            //console.log(`nombre del objeto: ${basem.id}`);
+            /*por si la cago*/
+            loader.load(`models/${this.getAttribute("title")}`, loadpatas);
+            //loader.load(`models/${piezas.respaldo}`, loadrespaldo);
+        }
+
+        /*loader.options.convertUpAxis = true;*/
+        loader.load('models/ropero/ropero.dae', loadbase);
+
+        function loadbase(collada) {
+            basem = collada.scene;
+            basem.position.set(0.4, -1.5, 0.8);
+            scene.add(basem);
+        }
+
+        function loadrespaldo(collada) {
+            respaldom = collada.scene;
+            respaldom.position.set(0.4, 2, 0.8);
+            scene.add(respaldom);
+        }
+
+        function loadpatas(collada) {
+            patasm = collada.scene;
+            patasm.position.set(.5, -2, 0.8);
+            scene.add(patasm);
+        }
+
+        var animate = function() {
+            requestAnimationFrame(animate);
+
+            /*cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;*/
+            controls.update();
+
+            renderer.render(scene, camera);
+        };
+
+        animate();
+    </script>
 </body>
 
 </html>

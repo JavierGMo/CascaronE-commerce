@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/PICOL-font-master/css/picol.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:400,500,700" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--<img src="" alt="logo" class="logo">-->
+        <nav>
+            <div class="cont-logo">
+                <a href="index.html">
+                    <img src="img/Carpifacil.png" alt="logo" class="logo">
+                </a>
+            </div>
+            <!--contenedor del logo-->
+            <div class="opciones-sesion">
+                <a href="iniciosesion.html">Inicia sesion</a>
+                <a href="registro-usuario.html">Registrate</a>
+                <a href="#" class="icono-carrito"><i class="picol_search"></i></a>
+                <p> </p>
+            </div>
+            <!--opciones para registro e inicio de sesion, y busqueda-->
+        </nav>
+    </header>
+    <div class="contenedor cont-carpintero">
+        <div class="carpi-asd padre-acciones">
+            <div class="mensaje acciones">
+                <a href="#cont-mensajes-usuario" class="mensajes" id="mensajes-usuario"><span class="titulos-acciones">Mensajes</span></a>
+            </div>
+            <div class="material acciones">
+                <a href="#cont-modelar" class="materiales" id="modelar"><span class="titulos-acciones">Modelar</span></a>
+            </div>
+            <div class="trabajos acciones">
+                <a href="#cont-ticket" class="trabajos-a" id="tickets"><span class="titulos-acciones">Ticket</span></a>
+            </div>
+        </div>
+        <!--opciones que tiene el usuario-->
+        <main>
+            <div class="funciones">
+                <div class="cont-mensajes-usuario oculto" id="cont-mensajes-usuario">
+                    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum nihil, amet ullam, ipsa aliquam qui.</span></p>
+                </div>
+                <div class="cont-modelar oculto" id="cont-modelar">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eius, nisi ab dolorum tempore excepturi nostrum non, ad culpa repellendus.</p>
+                </div>
+                <div class="cont-ticket oculto" id="cont-ticket">
+                    <div class="hola">
+                        <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque itaque exercitationem perferendis explicabo ipsum placeat repellendus eius. Eius rem esse ducimus magni accusamus.</span></p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+    </div>
+    <script src="js/mostrar.js"></script>
+    <script>
+        /**acciones para usuario */
+        let mensajesUsusario = document.getElementById('mensajes-usuario');
+        let modelar = document.getElementById('modelar');
+        let ticket = document.getElementById('tickets');
+        /**eventos para usuario */
+        mensajesUsusario.addEventListener('click', mostrarAccionUsuario);
+        modelar.addEventListener('click', mostrarAccionUsuario);
+        ticket.addEventListener('click', mostrarAccionUsuario);
+
+        function mostrarAccionUsuario() {
+            console.log('click');
+            for (let i = 0; i < document.querySelectorAll('.oculto').length; i++) {
+                document.querySelectorAll('.oculto')[i].style.display = 'none';
+            }
+            document.getElementById(this.getAttribute("href").split("#")[1]).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

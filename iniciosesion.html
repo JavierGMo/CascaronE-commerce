@@ -15,19 +15,19 @@
     <header>
         <!--<img src="" alt="logo" class="logo">-->
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Visualizar</a></li>
-                <li><a href="#">Modelar</a></li>
-                <li><a href="#">Ticket</a></li>
-                <li><a href="#">Presupuesto</a></li>
-            </ul>
+            <div class="cont-logo">
+                <a href="index.html">
+                    <img src="img/Carpifacil.png" alt="logo" class="logo">
+                </a>
+            </div>
+            <!--contenedor del logo-->
             <div class="opciones-sesion">
                 <a href="iniciosesion.html">Inicia sesion</a>
                 <a href="registro-usuario.html">Registrate</a>
-                <a href="#" class="icono-carrito"><i class="picol_shopping_cart"></i></a>
+                <a href="#" class="icono-carrito"><i class="picol_search"></i></a>
                 <p> </p>
             </div>
+            <!--opciones para registro e inicio de sesion, y busqueda-->
         </nav>
     </header>
     <div class="contenedor-sesion">
@@ -37,7 +37,7 @@
             <div class="imagen-pagina">
                 <a href="index.html"><img src="img/imagensesion.png" alt="Imagen de la sesion" class="img-sesion"></a>
             </div>
-            <form action="" class="formul-sesion">
+            <form action="" class="formul-sesion" method="POST">
                 <!--.formul-sesion-->
                 <legend>Iniciar sesion:</legend>
                 <div class="caja">
@@ -52,6 +52,10 @@
             </form>
         </div>
     </div>
+    <div>
+        <p id="demo"></p>
+    </div>
+    <script src="js/validacion.js"></script>
 </body>
 
 </html>

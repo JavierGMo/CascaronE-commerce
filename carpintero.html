@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carpintero</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/PICOL-font-master/css/picol.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Roboto:400,500,700" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="cont-logo">
+                <a href="index.html">
+                    <img src="img/Carpifacil.png" alt="logo" class="logo">
+                </a>
+            </div>
+            <!--contenedor del logo-->
+            <div class="opciones-sesion">
+                <a href="iniciosesion.html">Inicia sesion</a>
+                <a href="registro-usuario.html">Registrate</a>
+                <a href="#" class="icono-carrito"><i class="picol_search"></i></a>
+            </div>
+            <!--opciones para registro e inicio de sesion, y busqueda-->
+        </nav>
+    </header>
+    <div class="contenedor cont-carpintero">
+        <div class="carpi-asd padre-acciones">
+            <div class="mensaje acciones">
+                <a href="#cont-mensajes" class="mensajes" id="mensajes-carpintero"><span class="titulos-acciones">Mensajes</span></a>
+            </div>
+            <div class="material acciones">
+                <a href="#cont-materiales" class="materiales" id="materiales"><span class="titulos-acciones">Materiales</span></a>
+            </div>
+            <div class="trabajos acciones">
+                <a href="#cont-trabajos" class="trabajos-a" id="trabajos-a"><span class="titulos-acciones">Trabajos</span></a>
+            </div>
+        </div>
+        <!--opciones que tiene el carpintero-->
+        <main class="carpi-mn clearfix">
+            <div class="funciones">
+                <div class="cont-mensajes oculto" id="cont-mensajes">
+                    <div class="trabajo">
+                        <img src="img/imagen.png" alt="proudcto1">
+                        <span class="parrafito-chido">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>$100</p>
+                        </span>
+                    </div>
+                </div>
+                <!--contenedor de los mensajes con los modelos-->
+                <div class="cont-materiales oculto" id="cont-materiales">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus pariatur at deserunt, aperiam.</p>
+                </div>
+                <!--contenedor de los materiales disponibles-->
+                <div class="cont-trabajos oculto" id="cont-trabajos">
+                    <div class="trabajo">
+                        <img src="img/imagen.png" alt="proudcto1">
+                        <span class="parrafito-chido">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>$100</p>
+                        </span>
+                    </div>
+                    <div class="trabajo">
+                        <img src="img/imagen.png" alt="proudcto1">
+                        <span class="parrafito-chido">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>$100</p>
+                        </span>
+                    </div>
+                </div>
+                <!--contenedor de los trabajos de los carpinteros-->
+            </div>
+            <!--contenedor de las acciones de los carpinteros-->
+        </main>
+        <!--parte principal-->
+    </div>
+    <!--contenedor principal-->
+    <script src="js/mostrar.js"></script>
+</body>
+
+</html>

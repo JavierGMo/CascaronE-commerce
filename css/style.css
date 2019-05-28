@@ -15,6 +15,12 @@ body {
     /*border: 1px red green;*/
 }
 
+canvas {
+    background-color: #f7f1e3;
+    width: 70%;
+    height: 100%
+}
+
 
 /*estilo global**/
 
@@ -38,13 +44,17 @@ form {
 
 nav {
     position: relative;
-    background-color: #3498db;
+    background-color: #2980b9;
     padding: 1% 0 1% 0;
 }
 
 .logo {
-    height: 0;
-    width: 0;
+    height: 4.5%;
+    width: 4.5%;
+}
+
+.cont-logo {
+    margin-left: 2%;
 }
 
 nav ul li {
@@ -145,7 +155,8 @@ label {
 #enviar {
     margin-top: 23px;
     padding: 10px 15px;
-    background-color: rgba(52, 219, 119, .5);
+    background-color: #29b963;
+    /*rgba(52, 219, 119, .5);*/
     color: black;
     /*box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.3);*/
     border-radius: 10%;
@@ -214,25 +225,25 @@ label {
 /*fin para mostrar los productos**/
 
 
+/*fin para el main**/
+
+
 /*estilos globales para inicio de sesion y registro de usuario**/
 
 .contenedor-usuario {
     /*.contenedor-datos*/
     margin-top: 3rem;
     padding: 20px auto;
+    background-color: #F5F5F5;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 2% 2%;
+    margin-top: 20px;
 }
 
 .contenedor-usuario form {
     max-width: 30%;
     /*300px*/
     text-align: center;
-}
-
-.contenedor-usuario {
-    background-color: #F5F5F5;
-    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.3);
-    border-radius: 0 0 2% 2%;
-    margin-top: 20px;
 }
 
 .img-sesion {
@@ -242,30 +253,21 @@ label {
     margin: 10px auto;
 }
 
-
-/*fin de estilos globales**/
-
-
-/**inicio de sesion*/
-
-.contenedor-sesion {
-    /*contenedor-formulario*/
-    max-width: 70%;
-    /*600px*/
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 28px;
+.boton-sesion input {
+    width: 80%;
 }
 
-
-/*contenedor registro**/
-
-.cont-registro {
-    max-width: 80%;
-    /*600px*/
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 28px;
+#iniciosesion,
+#nuevoRegistro {
+    color: white;
+    margin-top: 20px;
+    background-color: #344955;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
 }
 
 form.formul-sesion {
@@ -279,10 +281,6 @@ form.formul-sesion {
 
 .formul-sesion .caja {
     margin: 20px 10px;
-}
-
-.c-datos {
-    width: 100%;
 }
 
 .caja label,
@@ -307,76 +305,216 @@ form.formul-sesion {
     border: 1px solid #2980b9;
 }
 
-.boton-sesion input {
-    width: 80%;
-}
-
-#iniciosesion,
-#nuevoRegistro {
-    color: white;
-    margin-top: 20px;
-    background-color: #344955;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-family: Roboto, sans-serif;
-    font-weight: 700;
-}
-
-div.usu-carp {
-    display: inline;
-    max-width: 500px;
-}
-
-.usuario-r,
-.carpi-r {}
-
 .imagen-pagina {
     padding: 20px 30px;
 }
 
 
-/**Estilos para el registro*/
+/*fin de estilos globales, sesion y registro**/
 
 
-/*.contenedor-alta{
-    max-width: 600px;
+/**inicio de sesion*/
+
+.contenedor-sesion {
+    /*contenedor-formulario*/
+    max-width: 60%;
+    /*600px*/
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 28px;
 }
-.contenedor-registro{
-    background-color: #F5F5F5;
+
+
+/*contenedor registro**/
+
+.cont-registro {
+    max-width: 80%;
+    /*600px*/
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 28px;
+}
+
+.c-datos {
+    width: 100%;
+}
+
+div.usu-carp {
+    text-align: center;
+}
+
+div.usu-carp,
+div.usu-carp>div {
+    display: inline;
+}
+
+div.usu-carp>div {
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+
+input[type="radio"] {
+    border: none;
+}
+
+
+/*fin para los estilos de registro**/
+
+
+/*paginas de usuario y carpintero**/
+
+.oculto {
+    display: none;
+}
+
+.cont-trabajos,
+.cont-mensajes {
+    /*background-color: #ecf0f1;*/
     box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.3);
+    padding: 120px;
+    width: 100%;
+    height: 90%;
     border-radius: 0 0 2% 2%;
-    margin-top: 20px;
 }
-.contenedor-registro form{
-    max-width: 300px;
+
+.trabajo {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.trabajo img {
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-right: 15px;
+}
+
+
+/*carpintero**/
+
+.cont-carpintero {
+    display: inline;
+}
+
+.carpi-asd,
+.carpi-mn {
+    float: left;
+}
+
+
+/**aside del carpintero*/
+
+.acciones {
     text-align: center;
-    margin: 0 auto;
-}*/
-
-
-/*.img-datos img{
-    width: 6rem;
-    height: 6rem;
-    border-radius: 100%;
-}*/
-
-
-/*.datos label, .datos input, .boton-registro{
-    display: block;
-    text-align: start;
+    padding: 5% 7%;
+    margin-bottom: 2.5rem;
+    transition: 0.2s;
 }
-.datos input{
-    margin-top: 10px;
-    margin-bottom: 15px;
+
+.acciones:hover {
+    padding: 3% 25%;
+    border-bottom: 2px solid #b9a329;
 }
-.boton-registro input{
-    width: 85%;
+
+
+/**acciones*/
+
+.carpi-asd {
+    margin-top: 3%;
+    margin-right: 3%;
+    border-right: 1px solid black;
+}
+
+.padre-acciones {
+    height: 100%;
+}
+
+span.titulos-acciones {
+    color: black!important;
+}
+
+span.titulos-acciones:hover {
+    color: #b92954!important;
+    padding: auto 3%;
+}
+
+
+/*
+div.padre-acciones>div>a {
+    color: black!important;
+}
+
+div.padre-acciones>div>a:hover {
+    color: #a934db!important;
+    padding: auto 3%;
 }*/
+
+.cont-carpintero .carpi-asd {
+    max-width: 30%;
+    padding: 5% 10% 5% 3%;
+}
+
+
+/**fin del aside del carpintero*/
+
+.cont-carpintero main.carpi-mn {
+    max-width: 70%;
+}
+
+.funciones>div {
+    max-width: 100%;
+}
+
+
+/*usuario**/
+
+
+/**contenedor modelo*/
+
+.contenedor-modelo {
+    position: absolute;
+    margin-left: 30px;
+    width: 30%;
+    height: 90%
+}
+
+.contenedor-modelo p {
+    color: #2980b9;
+}
+
+
+/*
+#desplegarsilla {
+    display: none;
+}
+
+#desplegarcama {
+    display: none;
+}
+
+#desplegarropero {
+    display: none;
+}
+*/
+
+.opc-modelos {
+    display: none;
+    height: 100%;
+    width: 80%;
+}
+
+.pasar-raton {
+    border: 1px solid white;
+}
+
+div.opciones-modelo>div a {
+    color: white!important;
+}
+
+div.opciones-modelo>div {
+    margin-bottom: 5%;
+}
 
 
 /*Footer*/
@@ -415,13 +553,14 @@ footer {
     font-family: Roboto;
     font-weight: 400;
     font-size: 15px;
+    transition: .6s;
 }
 
 .contenedor-terminos ul li a:hover {
     font-family: Roboto;
     /*text-decoration: underline;*/
     pointer-events: all;
-    text-decoration: underline;
+    border-bottom: 1px solid black;
 }
 
 .lema-copy {
@@ -431,3 +570,6 @@ footer {
     bottom: 0;
     margin-top: 20px;
 }
+
+
+/*fin footer**/

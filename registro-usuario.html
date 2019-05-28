@@ -15,19 +15,18 @@
     <header>
         <!--<img src="" alt="logo" class="logo">-->
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Visualizar</a></li>
-                <li><a href="#">Modelar</a></li>
-                <li><a href="#">Ticket</a></li>
-                <li><a href="#">Presupuesto</a></li>
-            </ul>
+            <div class="cont-logo">
+                <a href="index.html">
+                    <img src="img/Carpifacil.png" alt="logo" class="logo">
+                </a>
+            </div>
+            <!--contenedor del logo-->
             <div class="opciones-sesion">
                 <a href="iniciosesion.html">Inicia sesion</a>
                 <a href="registro-usuario.html">Registrate</a>
-                <a href="#" class="icono-carrito"><i class="picol_shopping_cart"></i></a>
-                <p> </p>
+                <a href="#" class="icono-carrito"><i class="picol_search"></i></a>
             </div>
+            <!--opciones para registro e inicio de sesion, y busqueda-->
         </nav>
     </header>
     <div class="cont-registro">
@@ -37,17 +36,17 @@
             <div class="imagen-pagina">
                 <a href="index.html" class="img-datos"><img src="img/imagensesion.png" alt="logo de la pagina" class="img-sesion"></a>
             </div>
-            <form action="" class="formul-sesion">
+            <form class="formul-sesion">
                 <legend>Registrate:</legend>
                 <div class="caja c-datos">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="text" id="nombre" placeholder="Nombre" required autocomplete="off">
                     <label for="apellidos">Apellido:</label>
-                    <input type="text" id="apellido" placeholder="Apellidos" required>
+                    <input type="text" id="apellido" placeholder="Apellidos" required autocomplete="off">
                     <label for="usuarioNuevo">Nombre de usuario:</label>
-                    <input type="text" id="usuarioNuevo" placeholder="Nombre de usuario" required>
+                    <input type="text" id="usuarioNuevo" placeholder="Nombre de usuario" required autocomplete="off">
                     <label for="correoRegistro">Correo:</label>
-                    <input type="email" id="correoRegistro" placeholder="Correo" required>
+                    <input type="email" id="correoRegistro" placeholder="Correo" required autocomplete="off">
                     <label for="nuevoPassword">Contraseña nueva:</label>
                     <input type="password" id="nuevoPassword" placeholder="Contraseña" required>
                     <label for="passwordConfirmado">Confirmar Contraseña:</label>
@@ -71,6 +70,7 @@
             </form>
         </div>
     </div>
+    <script src="js/validacion.js"></script>
 </body>
 
 </html>
